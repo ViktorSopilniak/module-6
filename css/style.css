@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    box-sizing: border-box;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 55px 60px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* ========== НАЧАЛО ОБЩЕГО БЛОКА ============= */
+
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2 {
+    font-family: "Pathway Gothic One";
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: rgb(38, 53, 85);
+    font-weight: 400;
+}
+
+
+/* --------- NAVIGATION MENU ------------ */
+
+.menu {
+    text-align: center;
+    height: 138px;
+    font-size: 0;
+    padding: 40px 0;
+}
+
+.menu>li {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 138px;
+    font-size: 1.5rem;
+    font-family: "Pathway Gothic One";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.menu a {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    height: 235px;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+
+/* Работа HOVER для всех меню */
+
+.menu a:hover {
+    color: rgb(38, 53, 85);
+}
+
+
+/* РИСУЕМ КРУГ ЛОГОТИПА */
+
+.menu .logo {
+    border-radius: 50%;
+    width: 138px;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu .logo a {
+    font-size: 3.75rem;
+    font-family: "Dorsa";
+    color: rgb(38, 53, 85);
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 35px 0;
+}
+
+
+/* ОТРАБОТКА САБМЕНЮ   */
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    width: 66px;
+    height: 90px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+}
+
+.submenu a {
+    padding: 7px 0 3px;
+    font-size: 1rem;
+    font-family: "Pathway Gothic One";
+    color: rgb(107, 116, 136);
+    text-transform: uppercase;
+}
+
+.menu_item:hover>.submenu {
+    display: block;
+}
+
+.menu_item:hover>.submenu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 27px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 7px 6px;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+
+/* ============ F O O T E R =========== */
+
+
+/* TO-TOP BUTTON */
+
+.to-top {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #38afe5;
+}
+
+.to-top>a {
+    display: block;
+    height: 100%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAY0lEQVRIx+3QQQqAMAxE0QFBTy32SmrvNy4soYUubCLiYv428BgCKKV+EhPTOwzJMFWYKFUxEcqYzBygjDk5c3FTNQMATsqY42acVI9xUQXaW6ahtuebOoxR68iXpvGLUuqLLi3Ooo+05FA5AAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+}
+
+
+/* ----------- LINKS RIBBON ----------- */
+
+.ribbon {
+    margin: 0 auto;
+    max-width: 1024px;
+    background-color: #30455b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 130px;
+    line-height: 1.5;
+}
+
+.ribbon ul li:first-child {
+    padding-bottom: 10px;
+}
+
+.ribbon a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: "Pathway Gothic One";
+    font-weight: 400;
+}
+
+.contacts h3,
+.contacts p {
+    color: white;
+    margin: 0;
+}
+
+.contacts h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: "Pathway Gothic One";
+    font-weight: 400;
+}
+
+.contacts p {
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+
+/* -----  SOCIAL BUTTONS  ------- */
+
+.social {
+    margin: 15px auto;
+    max-width: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    filter: invert(0);
+    transition-duration: 0.2s;
+    background: url('../images/sprite-social_buttons.png') no-repeat;
+}
+
+.social .tweeter {
+    background-position-x: 0px;
+}
+
+.social .facebook {
+    background-position-x: -41px;
+}
+
+.social .gplus {
+    background-position-x: -82px;
+}
+
+.social .in {
+    background-position-x: -123px;
+}
+
+.social a:hover {
+    filter: invert(1);
+    transition-duration: 0.2s;
+}
+
+.copyright {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: "Arial";
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+}
+
+
+/* ========== КОНЕЦ ОБЩЕГО БЛОКА ============= */
+
+
+/*  SLIDER BLOCK */
+
+.slider {
+    width: 904px;
+    height: 580px;
+    margin: auto;
+    background: url("../images/slider-1.png") no-repeat;
+    font-family: "Pathway Gothic One";
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+}
+
+.slogan-one {
+    font-size: 1.5rem;
+    color: rgb(38, 53, 85);
+    width: 225px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 10px 0;
+}
+
+.slogan-two {
+    font-size: 2.25rem;
+    color: rgb(255, 255, 255);
+    width: 275px;
+    height: 60px;
+    background-color: rgb(56, 175, 229);
+    padding: 15px 10px 0;
+}
+
+.slogan-one {
+    position: absolute;
+    top: 215px;
+}
+
+.slogan-two {
+    position: absolute;
+    top: 275px;
+}
+
+.slider-controls {
+    border-radius: 50%;
+    background-color: rgb(56, 175, 229);
+    position: absolute;
+    left: 35px;
+    bottom: 40px;
+    width: 90px;
+    height: 90px;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 27px;
+    left: 7px;
+    width: 32px;
+    height: 32px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAX0lEQVRIx2NgGAXDEvxv+N9AHWNAoIE6xvz/v/E/M3WMYaOGMZsGlTGbh6MxW6hjzLf/baAUjR8SNoZIQHuDULzWToHX0AKbnVoZddSooW8UM3WMqqFOPVI/WikPTwAAOU5eZggsNt4AAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 27px;
+    left: 48px;
+    width: 32px;
+    height: 32px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAXElEQVRIx+3QQQqAMAxE0YKCHju68kJWj+bui+LeSgcpIT/7B5OUIpcxYQpm5qqWomMFDTUoqeyd2hqkRvYiCnu9haOA4lv2A6SaJnt2ME6YXsLclEmYh1IwUYOd9flexNgPZDkAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+}
+
+.slider-controls a {
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/*  DESTINATION BLOCK */
+
+.destinations {
+    font-size: 0;
+}
+
+h2 {
+    margin: 55px 0 50px;
+}
+
+.destinations h3 {
+    font-family: "Pathway Gothic One";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px 0;
+}
+
+figure {
+    width: 288px;
+    height: 270px;
+    display: inline-block;
+    margin: 0px;
+}
+
+figure:hover>.shader {
+    display: block;
+}
+
+.destin-1 {
+    background: url("../images/venice.png") no-repeat;
+}
+
+.destin-2 {
+    background: url("../images/freedom.png") no-repeat;
+    margin: 0 15px;
+}
+
+.destin-3 {
+    background: url("../images/paris.png") no-repeat;
+}
+
+
+/* Шторка под кнопкой details  */
+
+.shader {
+    display: none;
+    position: absolute;
+    width: 145px;
+    height: 270px;
+    background-color: #193149;
+    color: rgb(203, 198, 198);
+}
+
+.shader>p {
+    font-size: 0.6rem;
+    font-family: "Arial";
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+
+/* DETAILS BUTTON  */
+
+.details {
+    border: 1px solid #9f9696;
+    border-radius: 5px;
+    background-color: #fcf5f7;
+    width: 60px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 20px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: "Arial";
+    font-weight: 400;
+    color: #000000;
+}
+
+.details a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: #000000;
+}
