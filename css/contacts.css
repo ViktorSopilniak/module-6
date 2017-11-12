@@ -33,15 +33,17 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
 .map_wrapper iframe {
     filter: saturate(0);
     transition-duration: 0.7s;
 }
 
-    .map_wrapper iframe:hover {
+.map_wrapper iframe:hover {
     filter: saturate(1);
     transition-duration: 0.7s;
 }
+
 
 /* ------ Таблицы адресов ------- */
 
@@ -63,18 +65,71 @@ table {
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 .address_table tr td {
     text-align: right;
 }
+
 .address_table tr td:first-child {
     text-align: left;
 }
+
 .e-link a {
     color: #fa7e7e;
 }
+
 
 /* -----------  Форма контакта ---------- */
 
 .contact_form {
     width: 214px;
+    position: relative;
+}
+
+textarea,
+input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="reset"],
+input[type="submit"] {
+    box-sizing: content-box;
+    width: 60px;
+    padding: 7px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(177, 170, 170);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 2px 1px 0px rgba(222, 219, 219, 0.004);
+}
+
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: #38afe5;
+    color: white;
+}
+
+span {
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgb(255, 0, 0);
+    line-height: 1.2;
+    text-align: right;
+    position: absolute;
+    right: 5px;
+    top: 90px;
+    padding-top: 5px;
+    display: none;
+}
+
+input[name="name"]:hover ~ span{
+    display: block;
 }
