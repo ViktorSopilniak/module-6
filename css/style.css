@@ -11,6 +11,7 @@ main {
     background-color: rgb(255, 255, 255);
 }
 
+
 /*  SLIDER BLOCK */
 
 .slider {
@@ -117,9 +118,6 @@ figure {
     margin: 0px;
 }
 
-figure:hover>.shader {
-    display: block;
-}
 
 .destin-1 {
     background: url("https://image.ibb.co/nC8O3G/venice.png") no-repeat;
@@ -138,12 +136,22 @@ figure:hover>.shader {
 /* Шторка под кнопкой details  */
 
 .shader {
-    display: none;
+    /* display: none; */
     position: absolute;
     width: 145px;
     height: 270px;
     background-color: #193149;
     color: rgb(203, 198, 198);
+    transform-origin: left center;
+    transform: scaleX(0.3) translateX(-50px);
+    opacity: 0;
+
+}
+figure:hover>.shader {
+    display: block;
+    transform: scaleX(1) translateX(0px);
+    transition-duration: 0.5s;
+    opacity: 1;
 }
 
 .shader>p {

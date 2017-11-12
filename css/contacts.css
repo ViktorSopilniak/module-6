@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    box-sizing: border-box;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 55px 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+a {
+    color: rgb(102, 101, 101);
+}
+
+
+/* ---------- Блок с картой и адресами--------- */
+
+.map_block {
+    width: 690px;
+}
+
+.map_wrapper {
+    height: 415px;
+    display: flex;
+    justify-content: space-between;
+}
+.map_wrapper iframe {
+    filter: saturate(0);
+    transition-duration: 0.7s;
+}
+
+    .map_wrapper iframe:hover {
+    filter: saturate(1);
+    transition-duration: 0.7s;
+}
+
+/* ------ Таблицы адресов ------- */
+
+.address_table {
+    width: 250px;
+    padding: 0 20px;
+}
+
+table {
+    width: 230px;
+    font-size: 14px;
+    font-family: "Arial";
+    color: rgb(102, 101, 101);
+    margin-bottom: 47px;
+}
+
+.address_table caption {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.address_table tr td {
+    text-align: right;
+}
+.address_table tr td:first-child {
+    text-align: left;
+}
+.e-link a {
+    color: #fa7e7e;
+}
+
+/* -----------  Форма контакта ---------- */
+
+.contact_form {
+    width: 214px;
+}
