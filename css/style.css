@@ -148,10 +148,15 @@ figure {
 
 }
 figure:hover>.shader {
-    display: block;
+    /* display: block;
     transform: scaleX(1) translateX(0px);
     transition-duration: 0.5s;
-    opacity: 1;
+    opacity: 1; */
+
+    	opacity: 1;
+    	transform: rotateY(0deg);
+    	transition: transform 0.4s,
+    	opacity 0.1s;
 }
 
 .shader>p {

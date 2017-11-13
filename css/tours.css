@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    box-sizing: border-box;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 55px 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-bottom: 45px;
+}
+
+h3 {
+    font-size: 0.8rem;
+    font-family: "Arial";
+    color: rgb(38, 53, 85);
+    margin-bottom: 13px;
+}
+
+p {
+    font-size: 0.7rem;
+    font-family: "Arial";
+    color: rgb(78, 80, 80);
+    margin-top: 13px;
+    margin-bottom: 5px;
+}
+
+a {
+    color: rgb(102, 101, 101);
+}
+
+
+/* ============ БЛОК ТУРОВ ============== */
+
+article {
+    width: 650px;
+}
+
+.gallery {
+    display: flex;
+flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tour {
+    width: 310px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+
+/* Карточка тура ----------------- */
+
+figure {
+    width: 133px;
+    height: 114px;
+    margin: 0 20px 0 0;
+    overflow: hidden;
+}
+
+.details a {
+    font-size: 1rem;
+    font-family: "Arial";
+    color: rgb(56, 175, 229);
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+
+/* Кнопка Details ----------------------- */
+
+.button {
+    border: 1px solid #9f9696;
+    border-radius: 5px;
+    background-color: #fcf5f7;
+    width: 60px;
+    height: 20px;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.button a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    font-family: "Arial";
+    font-weight: 400;
+    color: #000000;
+}
+
+.button:hover {
+    background-color: #38afe5;
+}
+
+.button:hover a {
+    color: white;
+}
+
+
+/* ============ БЛОК ФОРМ ПОИСКА ========= */
+
+aside {
+    width: 210px;
+}

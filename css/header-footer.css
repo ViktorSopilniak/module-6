@@ -2,6 +2,7 @@ body {
     background: url("https://image.ibb.co/nLh5Hb/background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
+
 a {
     text-decoration: none;
 }
@@ -68,7 +69,7 @@ nav {
     border-radius: 50%;
     width: 138px;
     background-color: rgb(255, 255, 255);
-  }
+}
 
 .menu .logo a {
     font-size: 3.75rem;
@@ -95,11 +96,12 @@ nav {
         opacity: 0;
     }
 }
+
 .menu .logo:hover {
     animation-name: rotateOut;
     animation-duration: 2s;
-
 }
+
 
 /* ОТРАБОТКА САБМЕНЮ   */
 
@@ -222,9 +224,8 @@ nav {
     display: block;
     width: 40px;
     height: 40px;
-    filter: invert(0);
-    transition-duration: 0.2s;
-    background: url('https://image.ibb.co/fV81qw/sprite_social_buttons.png') no-repeat;
+    transition-duration: 0s;
+    background: url('https://image.ibb.co/ciwTsb/sprite_social_buttons.png') no-repeat;
 }
 
 .social .facebook {
@@ -244,8 +245,8 @@ nav {
 }
 
 .social a:hover {
-    filter: invert(1);
-    transition-duration: 0.2s;
+    transition-duration: 0s;
+    background-position-y: -40px;
 }
 
 .copyright {
@@ -255,4 +256,8 @@ nav {
     font-family: "Arial";
     color: rgb(255, 255, 255);
     line-height: 1.5;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2), /* наверх и влево */
+    1px 1px 1px rgba(255, 255, 255, 0.2), /* вниз и вправо */
+    1px 1px 1px rgba(0, 0, 0, 0.7);
+    /* тёмная тень */
 }
