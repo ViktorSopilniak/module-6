@@ -26,6 +26,7 @@ article h2 {
     font-family: "Arial";
     color: rgb(38, 53, 85);
     font-weight: 400;
+    transition-duration: 0.7s;
 }
 
 .poster-title p {
@@ -60,7 +61,7 @@ article h2 {
 .poster {
     width: 650px;
     height: 225px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .poster h3 {
@@ -82,6 +83,7 @@ article h2 {
 img {
     float: left;
     padding-right: 20px;
+    transition-duration: 0.7s;
 }
 
 .wrap-line {
@@ -108,6 +110,7 @@ img {
     font-family: "Arial";
     font-weight: 400;
     color: #000000;
+    /* transition-duration: 0.7s; */
 }
 
 .details a {
@@ -150,4 +153,39 @@ aside li {
 aside li::before {
     content: "→";
     color: #78c9ed;
+}
+
+
+/* ANIMATION ---------------------- */
+
+.poster-title>h3:hover {
+    position: relative;
+    transform-origin: left center;
+    color: #3e90b3;
+    transform: scale(1.5);
+    transition-duration: 0.7s;
+}
+
+img:hover {
+    position: relative;
+    transform-origin: right top;
+    transform: rotate(-45deg);
+    transition-duration: 0.7s;
+}
+
+.poster p:hover {
+    color: #3e90b3;
+}
+
+.details:hover {
+    background-color: #3e90b3;
+    position: relative;
+    left: -30px;
+    width: 120px;
+    transition-property: left;
+    transition-duration: 1s;
+}
+
+.details a:hover {
+    color: white;
 }
