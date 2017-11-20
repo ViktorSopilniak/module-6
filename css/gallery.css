@@ -11,22 +11,23 @@ main {
     justify-content: center;
 }
 
-article {
-    padding: 0 0 80px;
-    width: 1024px;
-    background-color: white;
-}
-
 article h2 {
     font-family: "Pathway Gothic One";
     text-transform: uppercase;
     padding: 60px 0 20px 60px;
 }
 
+article {
+    padding: 0 0 80px;
+    box-sizing: border-box;
+    max-width: 1024px;
+    background-color: white;
+}
+
 .gallery {
     margin: auto;
-    width: 900px;
-    height: 545px;
+    width: 87.890625%;
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -36,6 +37,7 @@ article h2 {
 .gallery div {
     width: 288px;
     height: 155px;
+    margin-bottom: 40px;
 }
 
 
@@ -61,6 +63,7 @@ article .gallery .lens {
 
 .gallery a:hover .lens {
     display: block;
+    margin: 0;
 }
 
 
@@ -68,36 +71,83 @@ article .gallery .lens {
 
 .gallery .one {
     background: url("https://image.ibb.co/gCQ33G/Layer_87.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .two {
     background: url("https://image.ibb.co/e21zcb/Layer_88.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .three {
     background: url("https://image.ibb.co/efdO3G/Layer_89.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .four {
     background: url("https://image.ibb.co/g71zcb/Layer_90.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .five {
     background: url("https://image.ibb.co/jDyO3G/Layer_91.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .six {
     background: url("https://image.ibb.co/heV33G/Layer_92.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .seven {
     background: url("https://image.ibb.co/kdjViG/Layer_93.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .eight {
     background: url("https://image.ibb.co/dT8ZAw/Layer_94.jpg") no-repeat;
+    background-size: 100% auto;
 }
 
 .gallery .nine {
     background: url("https://image.ibb.co/dy31qw/Layer_95.jpg") no-repeat;
+    background-size: 100% auto;
+}
+
+
+/* ---------- RESPONSIVE DESIGN ----------- */
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .nine {
+        display: none;
+    }
+    .gallery div {
+        width: 330px;
+        height: 178px;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:767px) {
+    .nine,
+    .eight,
+    .seven {
+        display: none;
+    }
+    .gallery div {
+        width: 410px;
+        height: 221px;
+    }
+    .gallery {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:479px) {
+    .gallery div {
+        width: 288px;
+        height: 155px;
+    }
+    .gallery {
+        justify-content: center;
+    }
 }

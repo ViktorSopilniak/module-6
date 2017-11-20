@@ -50,8 +50,8 @@ h2 {
 }
 
 nav {
-    height: 235px;
-    width: 1024px;
+    max-height: 235px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -64,6 +64,10 @@ nav {
 
 
 /* РИСУЕМ КРУГ ЛОГОТИПА */
+
+.menu .logo_box {
+    width: 138px;
+}
 
 .menu .logo {
     border-radius: 50%;
@@ -85,11 +89,6 @@ nav {
         transform-origin: center;
         opacity: 1;
     }
-    /* 50% {
-        transform-origin: center;
-        transform: rotate3d(0, 0, 1, 400deg);
-        opacity: 0.5;
-    } */
     100% {
         transform-origin: center;
         transform: rotate3d(0, 0, 1, 450deg);
@@ -108,13 +107,14 @@ nav {
 .submenu {
     display: none;
     position: absolute;
-    top: 90px;
+    top: 83px;
     left: 20px;
     width: 66px;
     height: 90px;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     list-style: none;
+    z-index: 2;
 }
 
 .submenu a {
@@ -153,8 +153,8 @@ nav {
     height: 36px;
     border-radius: 50%;
     position: fixed;
-    bottom: 30px;
-    right: 20px;
+    bottom: 50px;
+    right: 70px;
     background-color: #38afe5;
 }
 
@@ -173,6 +173,7 @@ nav {
     max-width: 1024px;
     background-color: #30455b;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     height: 130px;
@@ -260,4 +261,69 @@ nav {
     1px 1px 1px rgba(255, 255, 255, 0.2), /* вниз и вправо */
     1px 1px 1px rgba(0, 0, 0, 0.7);
     /* тёмная тень */
+}
+
+
+/* ---------- RESPONSIVE DESIGN ----------- */
+
+
+/* == Navigation Menu == */
+
+@media screen and (max-width:1023px) {
+    .menu {
+        margin: auto;
+        padding: 0;
+        width: 300px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .menu>li {
+        height: 30px;
+        margin-bottom: 20px;
+    }
+    .menu .logo_box {
+        order: -3;
+        width: 300px;
+        height: 100px;
+        /* margin-bottom: 20px; */
+    }
+    .menu .logo {
+        margin: auto;
+        height: 100px;
+        width: 100px;
+    }
+    .menu .logo a {
+        padding: 22px 0;
+        font-size: 3rem;
+    }
+    .menu a {
+        padding-top: 0;
+    }
+    .submenu {
+        top: 30px;
+        height: 64px;
+    }
+    .to-top {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
+/* == Footer == */
+
+@media screen and (max-width:767px) {
+    .ribbon ul {
+        min-width: 100px;
+    }
+    .ribbon ul li:first-child {
+        padding-bottom: 0;
+    }
+    .contacts {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
 }
