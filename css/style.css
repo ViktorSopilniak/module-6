@@ -66,28 +66,34 @@ main {
 
 .left-arrow {
     position: absolute;
-    top: 27px;
-    left: 7px;
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 90px;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAX0lEQVRIx2NgGAXDEvxv+N9AHWNAoIE6xvz/v/E/M3WMYaOGMZsGlTGbh6MxW6hjzLf/baAUjR8SNoZIQHuDULzWToHX0AKbnVoZddSooW8UM3WMqqFOPVI/WikPTwAAOU5eZggsNt4AAAAASUVORK5CYII=);
+    background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.6;
 }
 
 .right-arrow {
     position: absolute;
-    top: 27px;
-    left: 48px;
-    width: 32px;
-    height: 32px;
+    left: 45px;
+    width: 45px;
+    height: 90px;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAXElEQVRIx+3QQQqAMAxE0YKCHju68kJWj+bui+LeSgcpIT/7B5OUIpcxYQpm5qqWomMFDTUoqeyd2hqkRvYiCnu9haOA4lv2A6SaJnt2ME6YXsLclEmYh1IwUYOd9flexNgPZDkAAAAASUVORK5CYII=);
+    background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.6;
 }
 
 .slider-controls a {
     display: block;
     height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
+}
+.right-arrow:hover, .left-arrow:hover {
+    opacity: 1;
+    transform: scale(1.3);
 }
 
 
@@ -148,15 +154,10 @@ figure {
 
 }
 figure:hover>.shader {
-    /* display: block;
-    transform: scaleX(1) translateX(0px);
-    transition-duration: 0.5s;
-    opacity: 1; */
-
-    	opacity: 1;
-    	transform: rotateY(0deg);
-    	transition: transform 0.4s,
-    	opacity 0.1s;
+    opacity: 1;
+    transform: rotateY(0deg);
+    transition: transform 0.4s,
+    opacity 0.1s;
 }
 
 .shader>p {
