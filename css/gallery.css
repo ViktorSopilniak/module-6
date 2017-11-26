@@ -3,35 +3,27 @@
     padding: 0;
 }
 
-
 /* ------- GALLERY ------- */
 
 main {
-    display: flex;
-    justify-content: center;
-}
-
-article h2 {
-    font-family: "Pathway Gothic One";
-    text-transform: uppercase;
-    padding: 60px 0 20px 60px;
-}
-
-article {
+    margin: auto;
     padding: 0 0 80px;
     box-sizing: border-box;
     max-width: 1024px;
     background-color: white;
 }
 
+h2 {
+    font-family: "Pathway Gothic One";
+    text-transform: uppercase;
+    padding: 60px 0 20px 60px;
+}
+
 .gallery {
     margin: auto;
     width: 87.890625%;
     height: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: space-between;
+    padding: 0;
 }
 
 .gallery div {
@@ -43,7 +35,7 @@ article {
 
 /* Изображение линзы при ховер-эффекте */
 
-article .gallery .lens {
+.gallery .lens {
     display: none;
     width: 48px;
     height: 48px;
@@ -72,52 +64,61 @@ article .gallery .lens {
 .gallery .one {
     background: url("https://image.ibb.co/gCQ33G/Layer_87.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .two {
     background: url("https://image.ibb.co/e21zcb/Layer_88.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .three {
     background: url("https://image.ibb.co/efdO3G/Layer_89.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .four {
     background: url("https://image.ibb.co/g71zcb/Layer_90.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .five {
     background: url("https://image.ibb.co/jDyO3G/Layer_91.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .six {
     background: url("https://image.ibb.co/heV33G/Layer_92.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .seven {
     background: url("https://image.ibb.co/kdjViG/Layer_93.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .eight {
     background: url("https://image.ibb.co/dT8ZAw/Layer_94.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 .gallery .nine {
     background: url("https://image.ibb.co/dy31qw/Layer_95.jpg") no-repeat;
     background-size: 100% auto;
+    background-clip: content-box;
 }
 
 
 /* ---------- RESPONSIVE DESIGN ----------- */
 
-@media screen and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width:768px) and (max-width:991px) {
     .nine {
         display: none;
     }
@@ -127,7 +128,7 @@ article .gallery .lens {
     }
 }
 
-@media screen and (min-width:480px) and (max-width:767px) {
+@media screen and (min-width:576px) and (max-width:767px) {
     .nine,
     .eight,
     .seven {
@@ -142,10 +143,10 @@ article .gallery .lens {
     }
 }
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:575px) {
     .gallery div {
         width: 288px;
-        height: 155px;
+        height: 200px;
     }
     .gallery {
         justify-content: center;

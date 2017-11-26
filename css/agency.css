@@ -75,14 +75,11 @@ img {
 article {
     vertical-align: top;
     display: inline-block;
-    /* max-width: 72%; */
 }
 
 aside {
     vertical-align: top;
     display: inline-block;
-    /* max-width: 23%; */
-    /* padding-left: 40px; */
 }
 
 .round-number h3,
@@ -114,8 +111,6 @@ aside {
 .list-offer {
     vertical-align: top;
     display: inline-block;
-    /* max-width: 50%; */
-    /* margin-right: 30px; */
 }
 
 .list-offer>li {
@@ -123,7 +118,8 @@ aside {
 }
 
 .list-offer>li::before {
-    content: url("https://image.ibb.co/gx4kHb/Layer_Arrow.png");
+    /* content: url("https://image.ibb.co/gx4kHb/Layer_Arrow.png"); */
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAp0lEQVQ4T2P8////fwYqAMahZ9Ds658ZGBkZGFI0ePEGAEGvdVz4wLDxwTeGZA1evIYRNAgUEx3nPzBseojfMIIGgfwDMqz9/AeGzXgMI8ogmGFt5z8wbMFhGIpBWUfe4A1QUIq7+PYX2IXoYUYbg/A5599/SDhteYQ90IkKI0KGgBxA0CBiDCFoEChQ287h9g5yUBB00Zwbn8HqKc4ixJYwBF1Ed4MALd6Zy2iNpr8AAAAASUVORK5CYII=");
     padding-right: 10px;
 }
 
@@ -135,8 +131,6 @@ aside {
 }
 
 .quote {
-    /* height: 225px; */
-    /* width: 215px; */
     box-sizing: border-box;
     padding: 20px 20px;
     background-color: #f2f0f0;
