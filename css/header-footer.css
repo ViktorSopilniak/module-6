@@ -1,6 +1,7 @@
 body {
     background: url("https://image.ibb.co/nLh5Hb/background.jpg") no-repeat center center fixed;
     background-size: cover;
+    line-height: 1.2;
 }
 
 a {
@@ -47,10 +48,11 @@ h2 {
     padding-top: 50px;
     text-align: center;
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 nav {
-    max-height: 235px;
+    height: 218px;
     max-width: 1024px;
     margin: 0 auto;
 }
@@ -72,6 +74,7 @@ nav {
 .menu .logo {
     border-radius: 50%;
     width: 138px;
+    height: 138px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -180,6 +183,10 @@ nav {
     line-height: 1.5;
 }
 
+.ribbon ul {
+    margin-bottom: 0;
+}
+
 .ribbon ul li:first-child {
     padding-bottom: 10px;
 }
@@ -190,6 +197,7 @@ nav {
     font-size: 1.2rem;
     font-family: "Pathway Gothic One";
     font-weight: 400;
+    text-decoration: none;
 }
 
 .contacts h3,
@@ -271,7 +279,7 @@ nav {
 
 @media screen and (max-width:1023px) {
     .menu {
-        margin: auto;
+        margin: 10px auto 0;
         padding: 0;
         width: 300px;
         height: auto;

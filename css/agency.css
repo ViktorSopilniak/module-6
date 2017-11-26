@@ -7,7 +7,7 @@
 /* ПОДЛОЖКА ФОН */
 
 main {
-    max-width: 902px;
+    max-width: 1024px;
     margin: auto;
     background-color: white;
     padding: 61px;
@@ -52,9 +52,14 @@ p {
     text-align: center;
 }
 
+.author-post {
+    text-align: center;
+}
+
 .article-line {
     height: 1px;
     background-color: #dedbdb;
+    background-clip: content-box;
     margin: 50px 0;
 }
 
@@ -62,7 +67,7 @@ p {
 /* ------ ВЕРСТКА БЛОКА PROFILE -------- */
 
 img {
-    margin-right: 25px;
+    margin-right: 20px;
     margin-bottom: 20px;
     float: left;
 }
@@ -70,14 +75,14 @@ img {
 article {
     vertical-align: top;
     display: inline-block;
-    max-width: 72%;
+    /* max-width: 72%; */
 }
 
 aside {
     vertical-align: top;
     display: inline-block;
-    max-width: 23%;
-    padding-left: 40px;
+    /* max-width: 23%; */
+    /* padding-left: 40px; */
 }
 
 .round-number h3,
@@ -109,12 +114,12 @@ aside {
 .list-offer {
     vertical-align: top;
     display: inline-block;
-    max-width: 50%;
-    margin-right: 30px;
+    /* max-width: 50%; */
+    /* margin-right: 30px; */
 }
 
 .list-offer>li {
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .list-offer>li::before {
@@ -130,11 +135,22 @@ aside {
 }
 
 .quote {
-    height: 225px;
-    width: 215px;
+    /* height: 225px; */
+    /* width: 215px; */
     box-sizing: border-box;
     padding: 20px 20px;
-    background: url("https://image.ibb.co/czPViG/Layer_Quotation.png") no-repeat;
+    background-color: #f2f0f0;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 32px 11px 0 11px;
+    border-color: #f2f0f0 transparent transparent transparent;
 }
 
 .quote::before {
@@ -147,6 +163,35 @@ aside {
     padding-left: 5px;
 }
 
-.author-post {
-    text-align: center;
+
+/* RESPONSIVE LAYOUT ----------  */
+
+@media screen and (max-width: 576px) {
+    main {
+        padding: 15px;
+    }
+    img {
+        float: none;
+        display: block;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    main {
+        padding: 35px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    main {
+        padding: 45px;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    main {
+        padding: 61px;
+    }
 }
