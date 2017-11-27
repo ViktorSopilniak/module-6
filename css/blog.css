@@ -151,8 +151,8 @@ aside li {
 }
 
 aside li::before {
-    content: "→";
-    color: #78c9ed;
+    vertical-align: bottom;
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAp0lEQVQ4T2P8////fwYqAMahZ9Ds658ZGBkZGFI0ePEGAEGvdVz4wLDxwTeGZA1evIYRNAgUEx3nPzBseojfMIIGgfwDMqz9/AeGzXgMI8ogmGFt5z8wbMFhGIpBWUfe4A1QUIq7+PYX2IXoYUYbg/A5599/SDhteYQ90IkKI0KGgBxA0CBiDCFoEChQ287h9g5yUBB00Zwbn8HqKc4ixJYwBF1Ed4MALd6Zy2iNpr8AAAAASUVORK5CYII=");
 }
 
 
