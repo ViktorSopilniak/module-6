@@ -8,12 +8,13 @@
 main {
     margin: auto;
     padding: 0 0 80px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     max-width: 1024px;
     background-color: white;
 }
 
-h2 {
+.gallery__title {
     font-family: "Pathway Gothic One";
     text-transform: uppercase;
     padding: 60px 0 20px 60px;
@@ -26,7 +27,7 @@ h2 {
     padding: 0;
 }
 
-.gallery div {
+.gallery__box {
     width: 288px;
     height: 155px;
     margin-bottom: 40px;
@@ -35,25 +36,32 @@ h2 {
 
 /* Изображение линзы при ховер-эффекте */
 
-.gallery .lens {
+.gallery__lens {
     display: none;
     width: 48px;
     height: 48px;
-    background-image: url("https://image.ibb.co/iMGXxb/ic_zoom_in_white_48dp_1x.png");
+    background-image: url("../images/zoom-in.svg");
+    background-size: contain;
 }
 
-.gallery a {
+.gallery__ref {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
-.gallery a:hover {
+.gallery__ref:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.gallery a:hover .lens {
+.gallery__ref:hover .gallery__lens {
     display: block;
     margin: 0;
 }
@@ -61,55 +69,55 @@ h2 {
 
 /* Заполнение галереи рисунками */
 
-.gallery .one {
+.gallery__item1 {
     background: url("https://image.ibb.co/gCQ33G/Layer_87.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .two {
+.gallery__item2 {
     background: url("https://image.ibb.co/e21zcb/Layer_88.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .three {
+.gallery__item3 {
     background: url("https://image.ibb.co/efdO3G/Layer_89.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .four {
+.gallery__item4 {
     background: url("https://image.ibb.co/g71zcb/Layer_90.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .five {
+.gallery__item5 {
     background: url("https://image.ibb.co/jDyO3G/Layer_91.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .six {
+.gallery__item6 {
     background: url("https://image.ibb.co/heV33G/Layer_92.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .seven {
+.gallery__item7 {
     background: url("https://image.ibb.co/kdjViG/Layer_93.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .eight {
+.gallery__item8 {
     background: url("https://image.ibb.co/dT8ZAw/Layer_94.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
 }
 
-.gallery .nine {
+.gallery__item9 {
     background: url("https://image.ibb.co/dy31qw/Layer_95.jpg") no-repeat;
     background-size: 100% auto;
     background-clip: content-box;
@@ -119,36 +127,98 @@ h2 {
 /* ---------- RESPONSIVE DESIGN ----------- */
 
 @media screen and (min-width:768px) and (max-width:991px) {
-    .nine {
+    .gallery__item9 {
         display: none;
     }
-    .gallery div {
+    .gallery__box{
         width: 330px;
         height: 178px;
     }
 }
 
 @media screen and (min-width:576px) and (max-width:767px) {
-    .nine,
-    .eight,
-    .seven {
+    .gallery__item9,
+    .gallery__item8,
+    .gallery__item7 {
         display: none;
     }
-    .gallery div {
+    .gallery__box {
         width: 410px;
-        height: 221px;
+        height: 225px;
     }
     .gallery {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 }
 
 @media screen and (max-width:575px) {
-    .gallery div {
+    .gallery__box {
         width: 288px;
-        height: 200px;
+        height: 225px;
     }
     .gallery {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+}
+/* ---------- MODAL FRAME FOR PREVIEW PICTURE ---------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+
+}
+.modal-img {
+display: block;
+max-width: 100%;
+/* max-height: auto; */
+
+}
+.modal-preview {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: middle;
+    min-width: 500px;
+    max-width: 1200px;
+}
+
+.modal-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+/* -------- RETINA DISPLAYS ---------- */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+/* Сугубо для домашней работы я все картинки заменяю на одну и ту же */
+    .gallery__item1,
+    .gallery__item2,
+    .gallery__item3,
+    .gallery__item4,
+    .gallery__item5,
+    .gallery__item6,
+    .gallery__item7,
+    .gallery__item8,
+    .gallery__item9 {
+        background: url("https://image.ibb.co/muzqub/photo_prev_2x.jpg") no-repeat;
     }
 }

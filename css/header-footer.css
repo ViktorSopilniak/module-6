@@ -44,7 +44,8 @@ h2 {
 
 .menu a {
     display: block;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 50px;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -83,25 +84,46 @@ nav {
     font-family: "Dorsa";
     color: rgb(38, 53, 85);
     text-transform: uppercase;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 35px 0;
+}
+
+@-webkit-keyframes rotateOut {
+    0% {
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 450deg);
+                transform: rotate3d(0, 0, 1, 450deg);
+        opacity: 0;
+    }
 }
 
 @keyframes rotateOut {
     0% {
-        transform-origin: center;
+        -webkit-transform-origin: center;
+                transform-origin: center;
         opacity: 1;
     }
     100% {
-        transform-origin: center;
-        transform: rotate3d(0, 0, 1, 450deg);
+        -webkit-transform-origin: center;
+                transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 450deg);
+                transform: rotate3d(0, 0, 1, 450deg);
         opacity: 0;
     }
 }
 
 .menu .logo:hover {
-    animation-name: rotateOut;
-    animation-duration: 2s;
+    -webkit-animation-name: rotateOut;
+            animation-name: rotateOut;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 
 
@@ -175,10 +197,16 @@ nav {
     margin: 0 auto;
     max-width: 1024px;
     background-color: #30455b;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 130px;
     line-height: 1.5;
 }
@@ -220,20 +248,25 @@ nav {
 }
 
 
-/* -----  SOCIAL BUTTONS  ------- */
+/* -----  SOCIAL BUTTONS (old school) ------- */
 
 .social {
     margin: 15px auto;
     max-width: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .social a {
     display: block;
     width: 40px;
     height: 40px;
-    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
     background: url('https://image.ibb.co/ciwTsb/sprite_social_buttons.png') no-repeat;
 }
 
@@ -254,7 +287,8 @@ nav {
 }
 
 .social a:hover {
-    transition-duration: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
     background-position-y: -40px;
 }
 
@@ -283,15 +317,20 @@ nav {
         padding: 0;
         width: 300px;
         height: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .menu>li {
         height: 30px;
         margin-bottom: 20px;
     }
     .menu .logo_box {
-        order: -3;
+        -webkit-box-ordinal-group: -2;
+            -ms-flex-order: -3;
+                order: -3;
         width: 300px;
         height: 100px;
         /* margin-bottom: 20px; */
@@ -330,8 +369,64 @@ nav {
     }
     .contacts {
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
-        align-items: baseline;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
     }
+}
+
+/* ========== SOCIAL LINKS SVG-edition ========== */
+
+.social__svg {
+    height: 40px;
+    width: 40px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    top: 50%;
+    fill: #000000;
+}
+
+.social__box {
+    margin: 15px auto;
+    max-width: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+}
+.social__ref {
+    display: block;
+    background: transparent;
+    border: 1px solid White;
+    border-radius: 50%;
+    float: left;
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+ 
+.social__ref--facebook:hover {
+    background: rgb(59, 89, 152);
+    border-color: rgb(59, 89, 152);
+}
+.social__ref--googleplus:hover {
+    background: rgb(221, 75, 57);
+    border-color: rgb(221, 75, 57);
+}
+.social__ref--linkedin:hover {
+    background: rgb(29, 135, 190);
+    border-color: rgb(29, 135, 190);
+}
+.social__ref--twitter:hover {
+    background: rgb(85, 172, 238);
+    border-color: rgb(85, 172, 238);
 }
