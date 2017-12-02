@@ -3,13 +3,14 @@
     padding: 0;
 }
 
+
 /* ------- GALLERY ------- */
 
 main {
     margin: auto;
     padding: 0 0 80px;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     max-width: 1024px;
     background-color: white;
 }
@@ -50,11 +51,11 @@ main {
     display: flex;
     height: 100%;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .gallery__ref:hover {
@@ -130,7 +131,7 @@ main {
     .gallery__item9 {
         display: none;
     }
-    .gallery__box{
+    .gallery__box {
         width: 330px;
         height: 178px;
     }
@@ -148,8 +149,8 @@ main {
     }
     .gallery {
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
@@ -160,11 +161,14 @@ main {
     }
     .gallery {
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
+
+
 /* ---------- MODAL FRAME FOR PREVIEW PICTURE ---------- */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -176,21 +180,20 @@ main {
     transition: opacity 300ms ease-in-out;
     visibility: hidden;
     opacity: 0;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .modal-img {
-display: block;
-max-width: 100%;
-/* max-height: auto; */
-
+    /* display: block; */
+    max-width: 100%;
 }
+
 .modal-preview {
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    vertical-align: middle;
-    min-width: 500px;
+    border: .1rem solid #666;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .5);
     max-width: 1200px;
 }
 
@@ -206,10 +209,12 @@ max-width: 100%;
     cursor: default;
 }
 
+
 /* -------- RETINA DISPLAYS ---------- */
+
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-/* Сугубо для домашней работы я все картинки заменяю на одну и ту же */
+    /* Сугубо для домашней работы я все картинки заменяю на одну и ту же */
     .gallery__item1,
     .gallery__item2,
     .gallery__item3,
