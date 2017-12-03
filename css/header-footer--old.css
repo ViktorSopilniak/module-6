@@ -23,6 +23,12 @@ h2 {
 
 /* --------- NAVIGATION MENU ------------ */
 
+nav {
+    height: 218px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 .menu {
     text-align: center;
     height: 138px;
@@ -45,18 +51,13 @@ h2 {
 .menu a {
     display: block;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding-top: 50px;
     text-align: center;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-nav {
-    height: 218px;
-    max-width: 1024px;
-    margin: 0 auto;
-}
 
 
 /* Работа HOVER для всех меню */
@@ -85,21 +86,21 @@ nav {
     color: rgb(38, 53, 85);
     text-transform: uppercase;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 35px 0;
 }
 
 @-webkit-keyframes rotateOut {
     0% {
         -webkit-transform-origin: center;
-                transform-origin: center;
+        transform-origin: center;
         opacity: 1;
     }
     100% {
         -webkit-transform-origin: center;
-                transform-origin: center;
+        transform-origin: center;
         -webkit-transform: rotate3d(0, 0, 1, 450deg);
-                transform: rotate3d(0, 0, 1, 450deg);
+        transform: rotate3d(0, 0, 1, 450deg);
         opacity: 0;
     }
 }
@@ -107,23 +108,23 @@ nav {
 @keyframes rotateOut {
     0% {
         -webkit-transform-origin: center;
-                transform-origin: center;
+        transform-origin: center;
         opacity: 1;
     }
     100% {
         -webkit-transform-origin: center;
-                transform-origin: center;
+        transform-origin: center;
         -webkit-transform: rotate3d(0, 0, 1, 450deg);
-                transform: rotate3d(0, 0, 1, 450deg);
+        transform: rotate3d(0, 0, 1, 450deg);
         opacity: 0;
     }
 }
 
 .menu .logo:hover {
     -webkit-animation-name: rotateOut;
-            animation-name: rotateOut;
+    animation-name: rotateOut;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
 }
 
 
@@ -201,12 +202,12 @@ nav {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 130px;
     line-height: 1.5;
 }
@@ -257,8 +258,8 @@ nav {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .social a {
@@ -266,7 +267,7 @@ nav {
     width: 40px;
     height: 40px;
     -webkit-transition-duration: 0s;
-            transition-duration: 0s;
+    transition-duration: 0s;
     background: url('https://image.ibb.co/ciwTsb/sprite_social_buttons.png') no-repeat;
 }
 
@@ -288,7 +289,7 @@ nav {
 
 .social a:hover {
     -webkit-transition-duration: 0s;
-            transition-duration: 0s;
+    transition-duration: 0s;
     background-position-y: -40px;
 }
 
@@ -321,7 +322,7 @@ nav {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+        flex-wrap: wrap;
     }
     .menu>li {
         height: 30px;
@@ -329,8 +330,8 @@ nav {
     }
     .menu .logo_box {
         -webkit-box-ordinal-group: -2;
-            -ms-flex-order: -3;
-                order: -3;
+        -ms-flex-order: -3;
+        order: -3;
         width: 300px;
         height: 100px;
         /* margin-bottom: 20px; */
@@ -373,12 +374,13 @@ nav {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-pack: distribute;
-            justify-content: space-around;
+        justify-content: space-around;
         -webkit-box-align: baseline;
-            -ms-flex-align: baseline;
-                align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
     }
 }
+
 
 /* ========== SOCIAL LINKS SVG-edition ========== */
 
@@ -399,10 +401,10 @@ nav {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
+
 .social__ref {
     display: block;
     background: transparent;
@@ -413,19 +415,22 @@ nav {
     width: 40px;
     position: relative;
 }
- 
+
 .social__ref--facebook:hover {
     background: rgb(59, 89, 152);
     border-color: rgb(59, 89, 152);
 }
+
 .social__ref--googleplus:hover {
     background: rgb(221, 75, 57);
     border-color: rgb(221, 75, 57);
 }
+
 .social__ref--linkedin:hover {
     background: rgb(29, 135, 190);
     border-color: rgb(29, 135, 190);
 }
+
 .social__ref--twitter:hover {
     background: rgb(85, 172, 238);
     border-color: rgb(85, 172, 238);

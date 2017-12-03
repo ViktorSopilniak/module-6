@@ -12,46 +12,51 @@
     <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/header-footer.css">
+    <!-- <link rel="stylesheet" href="css/header-footer.css"> -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
-    <nav id="page-nav">
-        <ul class="menu">
-            <li>
-                <a href="index.html">Home</a>
+    <nav class="navBox">
+        <ul class="navBox__menu">
+            <li class="navBox__item">
+                <a class="navBox__link" href="index.html">Home</a>
             </li>
-            <li class="menu_item">
-                <ul class="submenu">
-                    <li>
-                        <a href="agency.html">Agency</a>
+            <li class="navBox__item navBox__item--subMenu">
+                <!-- ----------- -->
+                <ul class="subMenu">
+                    <li class="subMenu__item">
+                        <a class="subMenu__link" href="agency.html">Agency</a>
                     </li>
-                    <li>
-                        <a href="#">News</a>
+                    <li class="subMenu__item">
+                        <a class="subMenu__link" href="#">News</a>
                     </li>
-                    <li>
-                        <a href="#">Team</a>
+                    <li class="subMenu__item">
+                        <a class="subMenu__link" href="#">Team</a>
                     </li>
                 </ul>
-                <a href="#">About</a>
+                <!-- ----------- -->
+                <a class="navBox__link" href="#">About</a>
             </li>
-            <li>
-                <a href="gallery.html">Gallery</a>
+            <li class="navBox__item">
+                <a class="navBox__link" href="gallery.html">Gallery</a>
             </li>
-            <li class="logo_box">
-                <div class="logo">
-                    <a href="#">Journey</a>
+            <li class="navBox__item logoBox">
+                <div class="logoBox__circle">
+                    <a class="logoBox__link" href="index.html">Journey</a>
                 </div>
             </li>
-            <li>
-                <a href="tours.html">Tours</a>
+            <li class="navBox__item">
+                <a class="navBox__link" href="tours.html">Tours</a>
             </li>
-            <li>
-                <a href="blog.html">Blog</a>
+            <li class="navBox__item">
+                <a class="navBox__link" href="blog.html">Blog</a>
             </li>
-            <li>
-                <a href="contacts.html">Contacts</a>
+            <li class="navBox__item">
+                <a class="navBox__link" href="contacts.html">Contacts</a>
             </li>
         </ul>
 
@@ -61,49 +66,58 @@
         <h2 class="gallery__title">our gallery</h2>
         <section class="gallery container">
             <section class="row">
-                <div class="gallery__box gallery__item1 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/gCQ33G/Layer_87.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item2 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/e21zcb/Layer_88.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item3 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/efdO3G/Layer_89.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item4 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/g71zcb/Layer_90.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item5 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/jDyO3G/Layer_91.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item6 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/heV33G/Layer_92.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item7 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox imageBox--prelastItem col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/kdjViG/Layer_93.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item8 col-12 col-md-6 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox imageBox--prelastItem col-12 col-md-6 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/dT8ZAw/Layer_94.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
-                <div class="gallery__box gallery__item9 col-12 col-lg-4">
-                    <a class="gallery__ref" href="#modal">
-                        <div class="gallery__lens"></div>
+                <div class="imageBox imageBox--lastItem col-12 col-lg-4">
+                    <a class="imageBox__ref" href="#modal">
+                        <img class="imageBox__thumb" srcset="https://image.ibb.co/dy31qw/Layer_95.jpg" alt="Nature image">
+                        <img class="imageBox__zoomIcon" src="https://image.ibb.co/iyWTFG/zoom.png" alt="zoom in icon">
                     </a>
                 </div>
             </section>
@@ -118,38 +132,42 @@
     </main>
 
     <footer>
-        <div class="to-top">
-            <a href="#top"></a>
+        <div class="toTopButton">
+            <a class="toTopButton__link" href="#top"></a>
         </div>
-        <div class="ribbon">
-            <ul>
-                <li>
-                    <a href="#">faqs page</a>
-                </li>
-                <li>
-                    <a href="#">people say</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#">useful links</a>
-                </li>
-                <li>
-                    <a href="#">partners</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#">insurance</a>
-                </li>
-                <li>
-                    <a href="#">family travel</a>
-                </li>
-            </ul>
-            <div class="contacts">
-                <h3>contact us:</h3>
-                <p>TEL: 1-800-234-5678</p>
-                <p>info@demolink.org</p>
+        <div class="footerBox container">
+            <div class="row">
+                <ul class="footerBox__list col-4 col-md-3">
+                    <li class="footerBox__item">
+                        <a class="footerBox__link" href="#">faqs page</a>
+                    </li>
+                    <li class="footerBox__item">
+                        <a class="footerBox__link" href="#">people say</a>
+                    </li>
+                </ul>
+                <ul class="footerBox__list col-4 col-md-3">
+                    <li class="footerBox__item">
+                        <a class="footerBox__link" href="#">useful links</a>
+                    </li>
+                    <li class="footerBox__item">
+                        <a class="footerBox__link" href="#">partners</a>
+                    </li>
+                </ul>
+                <ul class="footerBox__list col-4 col-md-3">
+                    <li class="footerBox__item">
+                        <a class="footerBox__link" href="#">insurance</a>
+                    </li>
+                    <li class="footerBox__item">
+                        <a class="footerBox__link" href="#">family travel</a>
+                    </li>
+                </ul>
+                <div class="contactsBox col-12 col-md-3">
+                    <div class="row">
+                        <h3 class="contactsBox__title col-4 col-md-12">contact us:</h3>
+                        <p class="contactsBox__tel col-4 col-md-12">TEL: 1-800-234-5678</p>
+                        <p class="contactsBox__mail col-4 col-md-12">info@demolink.org</p>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- SVG-изображения соц.иконок -->

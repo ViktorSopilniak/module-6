@@ -1,0 +1,173 @@
+/* TO-TOP BUTTON */
+
+.toTopButton {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 70px;
+    background-color: #38afe5;
+}
+
+.toTopButton__link {
+    display: block;
+    height: 100%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAY0lEQVRIx+3QQQqAMAxE0QFBTy32SmrvNy4soYUubCLiYv428BgCKKV+EhPTOwzJMFWYKFUxEcqYzBygjDk5c3FTNQMATsqY42acVI9xUQXaW6ahtuebOoxR68iXpvGLUuqLLi3Ooo+05FA5AAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+}
+
+
+/* ----------- LINKS RIBBON ----------- */
+
+.footerBox {
+    margin: 0 auto;
+    max-width: 1024px;
+    background-color: #30455b;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 130px; 
+}
+.footerBox__wrapper {
+    padding-top: 40px;
+}
+
+.footerBox__list,
+.contactsBox {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* justify-content: center; */
+    height: 60px;
+    /* max-width: 150px; */
+}
+
+.footerBox__item {
+    /* display: inline-block; */
+    width: 100%;
+}
+
+.footerBox__link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: "Pathway Gothic One";
+    font-weight: 400;
+    /* text-decoration: none; */
+}
+
+.contactsBox__title,
+.contactsBox__tel,
+.contactsBox__mail {
+    color: white;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.contactsBox__title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: "Pathway Gothic One";
+    font-weight: 400;
+}
+
+.contactsBox__tel,
+.contactsBox__mail {
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.copyright {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: "Arial";
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.2), /* наверх и влево */
+    1px 1px 1px rgba(255, 255, 255, 0.2), /* вниз и вправо */
+    1px 1px 1px rgba(0, 0, 0, 0.7);
+    /* тёмная тень */
+}
+
+
+/* ---------- RESPONSIVE DESIGN ----------- */
+
+@media screen and (max-width:767px) {
+
+    .contactsBox {
+        padding-top: 10px;
+        /* flex-wrap: nowrap; */
+        /* max-width: none; */
+        width: 100%;
+        text-align: left;
+        align-items: baseline;
+    }
+
+}
+
+
+/* ========== SOCIAL LINKS SVG-edition ========== */
+
+.social__svg {
+    height: 40px;
+    width: 40px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    top: 50%;
+    fill: #000000;
+}
+
+.social__box {
+    margin: 15px auto;
+    max-width: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.social__ref {
+    display: block;
+    background: transparent;
+    border: 1px solid White;
+    border-radius: 50%;
+    float: left;
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.social__ref--facebook:hover {
+    background: rgb(59, 89, 152);
+    border-color: rgb(59, 89, 152);
+}
+
+.social__ref--googleplus:hover {
+    background: rgb(221, 75, 57);
+    border-color: rgb(221, 75, 57);
+}
+
+.social__ref--linkedin:hover {
+    background: rgb(29, 135, 190);
+    border-color: rgb(29, 135, 190);
+}
+
+.social__ref--twitter:hover {
+    background: rgb(85, 172, 238);
+    border-color: rgb(85, 172, 238);
+}

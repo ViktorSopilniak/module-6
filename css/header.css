@@ -1,0 +1,220 @@
+body {
+    background: url("https://image.ibb.co/nLh5Hb/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.2;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2 {
+    font-family: "Pathway Gothic One";
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: rgb(38, 53, 85);
+    font-weight: 400;
+}
+
+
+/* --------- NAVIGATION MENU ------------ */
+
+.navBox {
+    height: 218px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.navBox__menu {
+    text-align: center;
+    height: 138px;
+    font-size: 0;
+    padding: 40px 0;
+}
+
+.navBox__item {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 138px;
+    font-size: 1.5rem;
+    font-family: "Pathway Gothic One";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.navBox__link {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Работа HOVER для всех меню */
+
+.navBox__link:hover {
+    color: rgb(38, 53, 85);
+}
+
+
+/* РИСУЕМ КРУГ ЛОГОТИПА */
+
+.logoBox {
+    width: 138px;
+}
+
+.logoBox__circle {
+    border-radius: 50%;
+    width: 138px;
+    height: 138px;
+    background-color: rgb(255, 255, 255);
+}
+
+.logoBox__link {
+    display: block;
+    font-size: 3.75rem;
+    font-family: "Dorsa";
+    color: rgb(38, 53, 85);
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 35px 0;
+}
+
+@-webkit-keyframes rotateOut {
+    0% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 450deg);
+        transform: rotate3d(0, 0, 1, 450deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rotateOut {
+    0% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, 1, 450deg);
+        transform: rotate3d(0, 0, 1, 450deg);
+        opacity: 0;
+    }
+}
+
+.logoBox__circle:hover {
+    -webkit-animation-name: rotateOut;
+    animation-name: rotateOut;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+
+/* ОТРАБОТКА САБМЕНЮ   */
+
+.subMenu {
+    display: none;
+    position: absolute;
+    top: 83px;
+    left: 20px;
+    width: 66px;
+    height: 90px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    z-index: 2;
+}
+
+.subMenu__link {
+    padding: 7px 0 3px;
+    font-size: 1rem;
+    font-family: "Pathway Gothic One";
+    color: rgb(107, 116, 136);
+    text-transform: uppercase;
+}
+
+.navBox__item--subMenu:hover .subMenu {
+    display: block;
+}
+
+.navBox__item--subMenu:hover .subMenu:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 27px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 7px 6px;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+
+/* == RESPONSIVE == */
+
+@media screen and (max-width:1023px) {
+    .navBox__menu {
+        margin: 10px auto 0;
+        padding: 0;
+        width: 300px;
+        height: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .navBox__item {
+        height: 30px;
+        margin-bottom: 20px;
+    }
+    .logoBox {
+        -webkit-box-ordinal-group: -2;
+        -ms-flex-order: -3;
+        order: -3;
+        width: 300px;
+        height: 100px;
+    }
+    .logoBox__circle {
+        margin: auto;
+        height: 100px;
+        width: 100px;
+    }
+    .logoBox__link {
+        padding: 22px 0;
+        font-size: 3rem;
+    }
+    .navBox__link {
+        padding-top: 0;
+    }
+    .subMenu {
+        top: 30px;
+        height: 64px;
+    }
+    .subMenu__item {
+        font-size: 1.1rem;
+    }
+    .to-top {
+        bottom: 10px;
+        right: 10px;
+    }
+}

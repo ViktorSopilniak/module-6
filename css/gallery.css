@@ -28,125 +28,58 @@ main {
     padding: 0;
 }
 
-.gallery__box {
+.imageBox {
+    position: relative;
     width: 288px;
     height: 155px;
     margin-bottom: 40px;
 }
+.imageBox__thumb {
+    width: 100%;
+    height: auto;
+}
 
+.imageBox__zoomIcon {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
 
 /* Изображение линзы при ховер-эффекте */
-
-.gallery__lens {
-    display: none;
-    width: 48px;
-    height: 48px;
-    background-image: url("../images/zoom-in.svg");
-    background-size: contain;
+.imageBox:hover .imageBox__thumb {
+    filter: grayscale(1) brightness(0.7);
 }
 
-.gallery__ref {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.gallery__ref:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.gallery__ref:hover .gallery__lens {
-    display: block;
-    margin: 0;
-}
-
-
-/* Заполнение галереи рисунками */
-
-.gallery__item1 {
-    background: url("https://image.ibb.co/gCQ33G/Layer_87.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item2 {
-    background: url("https://image.ibb.co/e21zcb/Layer_88.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item3 {
-    background: url("https://image.ibb.co/efdO3G/Layer_89.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item4 {
-    background: url("https://image.ibb.co/g71zcb/Layer_90.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item5 {
-    background: url("https://image.ibb.co/jDyO3G/Layer_91.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item6 {
-    background: url("https://image.ibb.co/heV33G/Layer_92.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item7 {
-    background: url("https://image.ibb.co/kdjViG/Layer_93.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item8 {
-    background: url("https://image.ibb.co/dT8ZAw/Layer_94.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
-}
-
-.gallery__item9 {
-    background: url("https://image.ibb.co/dy31qw/Layer_95.jpg") no-repeat;
-    background-size: 100% auto;
-    background-clip: content-box;
+.imageBox__ref:hover>.imageBox__zoomIcon {
+    opacity: 1;
 }
 
 
 /* ---------- RESPONSIVE DESIGN ----------- */
 
 @media screen and (min-width:768px) and (max-width:991px) {
-    .gallery__item9 {
+    .imageBox--lastItem {
         display: none;
     }
-    .gallery__box {
+    .imageBox {
         width: 330px;
         height: 178px;
     }
 }
 
 @media screen and (min-width:576px) and (max-width:767px) {
-    .gallery__item9,
-    .gallery__item8,
-    .gallery__item7 {
+    .imageBox--prelastItem,
+    .imageBox--lastItem {
         display: none;
     }
-    .gallery__box {
+    .imageBox {
         width: 410px;
         height: 225px;
     }
+
     .gallery {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -155,7 +88,7 @@ main {
 }
 
 @media screen and (max-width:575px) {
-    .gallery__box {
+    .imageBox {
         width: 288px;
         height: 225px;
     }
@@ -183,6 +116,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .modal-img {
@@ -215,15 +149,7 @@ main {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     /* Сугубо для домашней работы я все картинки заменяю на одну и ту же */
-    .gallery__item1,
-    .gallery__item2,
-    .gallery__item3,
-    .gallery__item4,
-    .gallery__item5,
-    .gallery__item6,
-    .gallery__item7,
-    .gallery__item8,
-    .gallery__item9 {
+        .imageBox {
         background: url("https://image.ibb.co/muzqub/photo_prev_2x.jpg") no-repeat;
     }
 }
